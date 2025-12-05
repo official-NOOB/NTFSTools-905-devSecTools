@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome | Admin & Customer Portal</title>
+<style>
+    /* ===== Reset ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* ===== Background and Layout ===== */
+    body {
+        font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #333;
+    }
+
+    /* ===== Card Container ===== */
+    .container {
+        background-color: #ffffff;
+        padding: 60px 70px;
+        border-radius: 15px;
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 90%;
+        max-width: 450px;
+        animation: fadeIn 0.8s ease-in-out;
+    }
+
+    /* ===== Heading ===== */
+    h1 {
+        color: #2c3e50;
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 35px;
+        letter-spacing: 0.5px;
+    }
+
+    /* ===== Buttons (Links) ===== */
+    a {
+        display: block;
+        text-decoration: none;
+        background-color: #667eea;
+        color: white;
+        padding: 14px 20px;
+        border-radius: 8px;
+        font-size: 17px;
+        font-weight: 600;
+        margin: 15px auto;
+        width: 80%;
+        transition: all 0.3s ease;
+    }
+
+    a:hover {
+        background-color: #5563c1;
+        transform: scale(1.05);
+    }
+
+    /* ===== Different Color for Customer Login ===== */
+    .customer {
+        background-color: #27ae60;
+    }
+
+    .customer:hover {
+        background-color: #1e8f52;
+    }
+
+    /* ===== Animation ===== */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-15px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== Responsive Design ===== */
+    @media (max-width: 480px) {
+        .container {
+            padding: 40px 25px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        a {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Our Portal</h1>
+        <a href="AdminLogin.html">🔐 Admin Login</a>
+        <a href="CustomerLogin.html" class="customer">👤 Customer Login</a>
+    </div>
+</body>
+</html>
