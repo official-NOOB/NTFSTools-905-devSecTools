@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Product Details</title>
+
+  <style>
+    /* General Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #00b09b, #96c93d);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Form Card */
+    .form-container {
+      background-color: #fff;
+      padding: 45px 55px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      width: 420px;
+      text-align: center;
+      animation: fadeIn 0.7s ease-in-out;
+    }
+
+    .form-container:hover {
+      transform: translateY(-3px);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    /* Heading */
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 25px;
+      font-size: 26px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Labels and Inputs */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    label {
+      text-align: left;
+      font-weight: 600;
+      color: #333;
+      font-size: 15px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: 0.2s;
+    }
+
+    input:focus {
+      border-color: #00b09b;
+      box-shadow: 0 0 6px rgba(0, 176, 155, 0.3);
+      outline: none;
+    }
+
+    /* Submit Button */
+    input[type="submit"] {
+      background-color: #00b09b;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #029e8c;
+      transform: scale(1.04);
+    }
+
+    /* Back Link */
+    .back-link {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #34495e;
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 8px;
+      margin-top: 25px;
+      font-size: 15px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      background-color: #2c3e50;
+      transform: scale(1.05);
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 480px) {
+      .form-container {
+        width: 90%;
+        padding: 30px 25px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-container">
+    <h2>Launch Product</h2>
+    <form action="aps" method="post">
+      <label for="pcode">Product Code</label>
+      <input type="text" id="pcode" name="pcode" required>
+
+      <label for="pname">Product Name</label>
+      <input type="text" id="pname" name="pname" required>
+
+      <label for="pcomp">Product Company</label>
+      <input type="text" id="pcomp" name="pcomp" required>
+
+      <label for="pprice">Product Price (₹)</label>
+      <input type="number" id="pprice" name="pprice" step="0.01" required>
+
+      <label for="pqty">Product Quantity</label>
+      <input type="number" id="pqty" name="pqty" required>
+
+      <input type="submit" value="Insert Product">
+    </form>
+
+    <a href="AddProduct.jsp" class="back-link">← Back to Dashboard</a>
+  </div>
+</body>
+</html>
