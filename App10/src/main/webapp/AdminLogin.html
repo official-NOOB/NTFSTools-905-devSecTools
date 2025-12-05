@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login</title>
+
+  <style>
+    /* ===== Global Reset ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    /* ===== Card Container ===== */
+    .form-container {
+      background-color: #ffffff;
+      border-radius: 14px;
+      padding: 50px 45px;
+      width: 400px;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: fadeIn 0.7s ease-in-out;
+    }
+
+    /* Hover animation */
+    .form-container:hover {
+      transform: translateY(-3px);
+      transition: all 0.3s ease;
+    }
+
+    /* ===== Title ===== */
+    h2 {
+      color: #2c3e50;
+      font-size: 28px;
+      margin-bottom: 30px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== Form Styles ===== */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    label {
+      text-align: left;
+      font-weight: 600;
+      color: #333;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+      background-color: #f9f9f9;
+      transition: all 0.2s ease;
+    }
+
+    input:focus {
+      border-color: #667eea;
+      box-shadow: 0 0 6px rgba(102, 126, 234, 0.4);
+      background-color: #fff;
+    }
+
+    /* ===== Submit Button ===== */
+    input[type="submit"] {
+      background-color: #667eea;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #5563c1;
+      transform: scale(1.04);
+    }
+
+    /* ===== Register Link ===== */
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #667eea;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: #5563c1;
+      text-decoration: underline;
+    }
+
+    /* ===== Animation ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 480px) {
+      .form-container {
+        width: 90%;
+        padding: 35px 25px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-container">
+    <h2>Admin Login</h2>
+    <form action="alog" method="post">
+      <label for="aname">Username</label>
+      <input type="text" id="aname" name="aname" placeholder="Enter your username" required />
+
+      <label for="apwd">Password</label>
+      <input type="password" id="apwd" name="apwd" placeholder="Enter your password" required />
+
+      <input type="submit" value="Log In" />
+    </form>
+
+  </div>
+</body>
+</html>
