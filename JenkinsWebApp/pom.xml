@@ -5,18 +5,18 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>nit</groupId>
-  <artifactId>JenkinsWebApp</artifactId>
+  <artifactId>MavenProj07-TestWebApp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>JenkinsWebApp Maven Webapp</name>
+  <name>MavenProj07-TestWebApp Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>8</maven.compiler.source>
-    <maven.compiler.target>8</maven.compiler.target>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -26,10 +26,26 @@
       <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
+<dependency>
+    <groupId>jakarta.servlet</groupId>
+    <artifactId>jakarta.servlet-api</artifactId>
+    <version>6.1.0</version>
+    <scope>compile</scope>
+</dependency>
+    
+    <!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc10 -->
+<dependency>
+    <groupId>com.oracle.database.jdbc</groupId>
+    <artifactId>ojdbc10</artifactId>
+    <version>19.29.0.0</version>
+</dependency>
+    
   </dependencies>
 
   <build>
-    <finalName>JenkinsWebApp</finalName>
+    <finalName>SeasonApp</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
